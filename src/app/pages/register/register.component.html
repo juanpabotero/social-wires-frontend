@@ -7,28 +7,59 @@
   <div class="wrapper">
     <h2>Welcome To Wires</h2>
     <a routerLink="/login">Sign In</a>
-    <form>
+
+    <form [formGroup]="registerForm" (submit)="SubmitForm()">
       <div class="input">
-        <label for="username"> Nickname </label>
-        <input id="username" type="text" placeholder="Nickname" />
+        <label for="username"> Username </label>
+        <input
+          formControlName="username"
+          id="username"
+          type="text"
+          placeholder="Username"
+        />
       </div>
       <div class="input">
-        <label for="name"> Name </label>
-        <input id="name" type="text" placeholder="Name" />
+        <label for="fullname"> Name </label>
+        <input
+          formControlName="fullname"
+          id="fullname"
+          type="text"
+          placeholder="Name"
+        />
       </div>
       <div class="input">
         <label for="email"> Email Address </label>
-        <input id="email" type="email" placeholder="Email Address" />
+        <input
+          formControlName="email"
+          id="email"
+          type="email"
+          placeholder="Email Address"
+        />
       </div>
       <div class="input">
         <label for="password"> Password </label>
-        <input id="password" type="password" placeholder="Password" />
+        <input
+          formControlName="password"
+          id="password"
+          type="password"
+          placeholder="Password"
+        />
       </div>
+      <button type="submit" [disabled]="registerForm.invalid">Create</button>
     </form>
-    <button>Create</button>
   </div>
   <footer>
     <p>All Rights Reserved. WIRES</p>
     <p>Privacy Policy | Terms & Conditions</p>
   </footer>
+</div>
+
+<div class="modal-error d-none">
+  Please fix the following errors:
+  <ul>
+    <li *ngFor="let error of errors">
+      {{ error }}
+    </li>
+  </ul>
+  <button (click)="toggleModal()">Close</button>
 </div>

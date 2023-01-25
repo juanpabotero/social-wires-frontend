@@ -7,21 +7,37 @@
   <div class="wrapper">
     <h2>Welcome To Wires</h2>
     <a routerLink="/register">Sign Up</a>
-    <form>
+
+    <form [formGroup]="loginForm" (submit)="SubmitForm()">
       <div class="input">
-        <label for="email"> Email Address </label>
-        <input id="email" type="email" placeholder="Email Address" />
+        <label for="email"> Username </label>
+        <input
+          formControlName="username"
+          id="username"
+          type="text"
+          placeholder="Username"
+        />
       </div>
       <div class="input">
         <label for="password"> Password </label>
-        <input id="password" type="password" placeholder="Password" />
+        <input
+          formControlName="password"
+          id="password"
+          type="password"
+          placeholder="Password"
+        />
       </div>
+      <button type="submit">Sign In</button>
+      <div class="remember">Remember me</div>
     </form>
-    <button>Sign In</button>
-    <div class="remember">Remember me</div>
   </div>
   <footer>
     <p>All Rights Reserved. WIRES</p>
     <p>Privacy Policy | Terms & Conditions</p>
   </footer>
+</div>
+
+<div class="modal-error d-none">
+  <div>{{error}}</div>
+  <button (click)="toggleModal()">Close</button>
 </div>

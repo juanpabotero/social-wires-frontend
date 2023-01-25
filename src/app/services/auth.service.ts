@@ -14,7 +14,7 @@ export class AuthService {
     return this.http.post<RegisterUserResponse>('http://localhost:3000/wires/auth/signup', user);
   }
 
-  loginUser(user: any): Observable<any> {
-    return this.http.post<any>('http://localhost:3000/wires/auth/signin', user);
+  loginUser(user: loginUser): Observable<loginUserResponse> {
+    return this.http.post<loginUserResponse>('http://localhost:3000/wires/auth/signin', user);
   }
 }
