@@ -3,7 +3,7 @@
   max-width: none;
 }
 
-button {
+button, a {
   cursor: pointer;
 }
 
@@ -12,20 +12,21 @@ button {
   gap: 20px;
 }
 
-.buttons button {
+.buttons a {
   font-size: 18px;
   padding: 12px 30px;
   border-radius: 10px;
   border: 1px solid #f9fd6d;
   font-weight: bold;
+  text-decoration: none;
 }
 
-.buttons button:nth-child(1) {
+.buttons a:nth-child(1) {
   background-color: #f9fd6d;
   color: black;
 }
 
-.buttons button:nth-child(2) {
+.buttons a:nth-child(2) {
   background-color: #16202a;
   color: #f9fd6d;
 }

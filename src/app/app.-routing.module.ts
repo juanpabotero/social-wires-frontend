@@ -7,6 +7,10 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
   },
+  {
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then((m) => m.RegisterModule),
+  },
   { path: '**', redirectTo: '' },
 ];
 
