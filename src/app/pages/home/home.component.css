@@ -1,0 +1,186 @@
+.align-right {
+  text-align: right;
+  max-width: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.buttons button {
+  font-size: 18px;
+  padding: 12px 30px;
+  border-radius: 10px;
+  border: 1px solid #f9fd6d;
+  font-weight: bold;
+}
+
+.buttons button:nth-child(1) {
+  background-color: #f9fd6d;
+  color: black;
+}
+
+.buttons button:nth-child(2) {
+  background-color: #16202a;
+  color: #f9fd6d;
+}
+
+.circle {
+  width: 600px;
+  height: 600px;
+  transform: translatex(40%);
+  border-radius: 50%;
+  background-color: #f9fd6d50;
+  position: fixed;
+  z-index: -1;
+}
+
+.circle-below {
+  transform: translatex(-60%) translateY(150%);
+}
+
+.container {
+  padding: 50px 10px;
+  margin-inline: auto;
+  max-width: 800px;
+}
+
+.d-none {
+  display: none;
+}
+.d-flex {
+  display: flex;
+}
+
+.f-reverse {
+  flex-direction: row-reverse;
+}
+.f-reverse-col {
+  flex-direction: column-reverse;
+}
+
+.f-justify-center {
+  justify-content: center;
+}
+
+.f-justify-end {
+  justify-content: flex-end;
+}
+
+.f-direction-column {
+  flex-direction: column;
+}
+
+.info-card-container {
+  display: flex;
+  gap: 30px;
+  margin-inline: auto;
+  margin-bottom: 40px;
+}
+
+.info-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.info-card img {
+  width: 100px;
+}
+
+.info-card p {
+  max-width: 40ch;
+}
+
+img {
+  width: 200px;
+}
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  gap: 40px;
+  max-width: 400px;
+  margin-inline: auto;
+  margin-bottom: 80px;
+}
+
+.logos img {
+  width: 60px;
+  padding: 30px;
+}
+
+.logos img:nth-child(1) {
+  backdrop-filter: blur(10px);
+  background-color: rgba(70%, 70%, 70%, 0.3);
+  border-radius: 14px;
+}
+
+.qr-code {
+  backdrop-filter: blur(10px);
+  background-color: rgba(70%, 70%, 70%, 0.5);
+  border-radius: 14px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin-inline: auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  max-width: 500px;
+  padding: 10px;
+}
+
+.titles {
+  max-width: 30ch;
+}
+
+.titles h3 {
+  font-size: 22px;
+}
+.titles h4 {
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+.w-200px {
+  width: 300px;
+}
+
+@media (min-width: 680px) {
+  .circle {
+    transform: translateX(80%);
+  }
+  .d-none {
+    display: flex;
+  }
+  .d-flex {
+    display: none;
+  }
+
+  .info-card-container {
+    margin-inline: none;
+  }
+
+  .titles {
+    max-width: 50ch;
+  }
+
+  .wrapper {
+    margin-bottom: 120px;
+  }
+}
