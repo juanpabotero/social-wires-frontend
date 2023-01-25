@@ -92,3 +92,11 @@ label {
   margin-inline: auto;
   max-width: 500px;
 }
+
+.remember {
+  color: #f9fd6d;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 14px;
+  width: max-content;
+}

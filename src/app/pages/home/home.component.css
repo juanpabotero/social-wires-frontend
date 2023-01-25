@@ -3,7 +3,8 @@
   max-width: none;
 }
 
-button, a {
+button,
+a {
   cursor: pointer;
 }
 
@@ -34,7 +35,8 @@ button, a {
 .circle {
   width: 600px;
   height: 600px;
-  transform: translatex(40%);
+  top: 50px;
+  right: -400px;
   border-radius: 50%;
   background-color: #f9fd6d50;
   position: fixed;
@@ -164,7 +166,7 @@ img {
 
 @media (min-width: 680px) {
   .circle {
-    transform: translateX(80%);
+    right: -300px;
   }
   .d-none {
     display: flex;
