@@ -18,19 +18,13 @@ h2 {
   color: #f9fd6d;
 }
 
-form,
 .form-group {
   display: flex;
   flex-direction: column;
-}
-
-form {
-  gap: 30px;
   margin-bottom: 40px;
 }
 
-input,
-textarea {
+input {
   background-color: #16202a;
   border-radius: 20px;
   border: 1px solid #ccc;

@@ -1,9 +1,26 @@
 <div class="container">
+  <div class="menu d-none">
+    <h2>Daniel Amadeus</h2>
+    <ul>
+      <li>
+        <a routerLink="/auth/create-message">Create Message</a>
+      </li>
+      <li>
+        <a routerLink="/auth/my-messages">My Messages</a>
+      </li>
+      <li>
+        <a routerLink="/auth/all-messages">See All Messages</a>
+      </li>
+      <li>
+        <a routerLink="/">Logout</a>
+      </li>
+    </ul>
+  </div>
   <header>
     <img src="../../../assets/img/Group 2.png" alt="logo" />
     <nav>
       <img src="../../../assets/icon/chatbox-ellipses-1.png" alt="icon" />
-      <img src="../../../assets/icon/menu.png" alt="icon" />
+      <img (click)="displayMenu()" src="../../../assets/icon/menu.png" alt="icon" />
     </nav>
   </header>
   <router-outlet></router-outlet>

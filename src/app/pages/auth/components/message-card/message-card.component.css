@@ -1,0 +1,21 @@
+h4 {
+  margin: 0;
+}
+.message {
+  background-color: #ccc;
+  color: #16202a;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.message div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message span:nth-child(1) {
+  font-size: 12px;
+}
+.message span:nth-child(2) {
+  font-weight: bold;
+}
