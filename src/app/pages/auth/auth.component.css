@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 500px;
+  padding: 15px 15px;
+  width: 100%;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+img {
+  width: 160px;
+}
+
+nav img {
+  width: 25px;
+  cursor: pointer;
+}
+nav img:nth-child(1) {
+  margin-right: 25px;
+}

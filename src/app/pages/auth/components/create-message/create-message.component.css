@@ -1,0 +1,72 @@
+
+button {
+  background-color: #ccc;
+  border: none;
+  border-radius: 20px;
+  color: #16202a;
+  font: inherit;
+  font-weight: bold;
+  padding: 10px 40px;
+  width: max-content;
+  align-self: flex-end;
+}
+
+.container {
+  margin-bottom: 40px;
+}
+
+h2{
+  color: #f9fd6d;
+}
+
+form, .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+input, textarea {
+  background-color: #16202a;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  color: #ccc;
+  font-size: 16px;
+  padding: 10px;
+}
+
+label {
+  color: #f9fd6d;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+textarea:invalid {
+  border: 1px solid red;
+}
+
+.message{
+  background-color: #ccc;
+  color: #16202a;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+h4 {
+  margin: 0;
+}
+
+.message div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message span:nth-child(1) {
+  font-size: 12px;
+}
+.message span:nth-child(2) {
+  font-weight: bold;
+}
