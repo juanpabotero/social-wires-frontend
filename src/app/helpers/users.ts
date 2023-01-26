@@ -1,8 +1,16 @@
+const user = {
+  email: 'juan@gmail.com',
+  fullname: 'juanpa',
+  password: '1234',
+  username: 'juan',
+  id: "24054e01-c277-4f00-9358-0563eec1479d"
+};
 const user1 = {
   email: 'juan1@gmail.com',
   fullname: 'juanpa1',
   password: '111',
   username: 'juan1',
+  id: "24054e01-c277-4f00-9358-0563eec1479d"
 };
 const user2 = {
   email: 'juan2@gmail.com',
