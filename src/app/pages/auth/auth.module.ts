@@ -10,7 +10,13 @@ import { MessageCardComponent } from './components/message-card/message-card.com
 import { AllMessagesComponent } from './components/all-messages/all-messages.component';
 
 @NgModule({
-  declarations: [CreateMessageComponent, AuthComponent, MyMessagesComponent, MessageCardComponent, AllMessagesComponent],
+  declarations: [
+    CreateMessageComponent,
+    AuthComponent,
+    MyMessagesComponent,
+    MessageCardComponent,
+    AllMessagesComponent,
+  ],
   imports: [CommonModule, AuthRoutingModule, ReactiveFormsModule, FormsModule],
 })
 export class AuthModule {}

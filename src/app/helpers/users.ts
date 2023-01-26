@@ -31,6 +31,7 @@ const user4 = {
   fullname: 'juanpa4',
   password: '444',
   username: 'juan4',
+  id: "de6127ca-82d0-43de-a4d8-453069294b6d"
 };
 const user5 = {
   email: 'juan5@gmail.com',

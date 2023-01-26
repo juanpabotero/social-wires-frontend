@@ -19,18 +19,21 @@
         formControlName="text"
         class="form-control"
         placeholder="Create message to share with your friends. Max. 700 chars"
-        maxlength="700"
         rows="10"
+        maxlength="700"
         (keyup)="onKeyUpmessage($event)"
-      ></textarea>
+      >
+      </textarea>
+      <span class="error d-none">
+        Avoid writing with signs such as /-+*!@#$%&*()_"
+      </span>
     </div>
-    <button
-      type="submit"
-      class="btn btn-primary"
-    >
-      Share
-    </button>
+    <button type="submit" class="btn btn-primary">Share</button>
   </form>
 
-  <app-message-card [title]="title" [message]="message"></app-message-card>
+  <app-message-card
+    [title]="title"
+    [message]="message"
+    [username]="username"
+  ></app-message-card>
 </div>

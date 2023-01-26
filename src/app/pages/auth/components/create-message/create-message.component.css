@@ -14,8 +14,29 @@ button {
   margin-bottom: 40px;
 }
 
-h2 {
-  color: #f9fd6d;
+.d-none {
+  display: none;
+}
+
+.error {
+  position: absolute;
+  right: 0;
+  top: -10px;
+  color: red;
+  background-color: #eee;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.error:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #eee;
 }
 
 form,
@@ -28,12 +49,19 @@ form {
   gap: 30px;
   margin-bottom: 40px;
 }
+.form-group {
+  position: relative;
+}
 
+h2 {
+  color: #f9fd6d;
+}
 input,
 textarea {
   background-color: #16202a;
   border-radius: 20px;
   border: 1px solid #ccc;
+  outline: none;
   color: #ccc;
   font-size: 16px;
   padding: 10px;
@@ -43,8 +71,4 @@ label {
   color: #f9fd6d;
   margin-bottom: 5px;
   font-size: 14px;
-}
-
-textarea:invalid {
-  border: 1px solid red;
 }

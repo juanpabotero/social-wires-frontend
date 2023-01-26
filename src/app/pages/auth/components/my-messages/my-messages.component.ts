@@ -9,12 +9,12 @@ import { MessageService } from 'src/app/services/message.service';
 })
 export class MyMessagesComponent implements OnInit {
   messages: OwnMessageResponse[] = [];
+  username: string = sessionStorage.getItem('username') || 'Username';
 
   constructor(private messageService: MessageService) {}
 
   ngOnInit(): void {
     this.messageService.getOwnMessages().subscribe((res) => {
-      console.log(res);
       this.messages = res;
     });
   }

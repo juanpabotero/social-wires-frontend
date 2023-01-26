@@ -1,21 +1,15 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.css']
+  styleUrls: ['./auth.component.css'],
 })
-export class AuthComponent implements OnInit, AfterViewInit {
+export class AuthComponent {
+  username: string = sessionStorage.getItem('username') || 'Username';
 
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
-  }
-
-  ngAfterViewInit(): void {
-
-  }
+  constructor(private router: Router) {}
 
   displayMenu() {
     const menu = document.querySelector('.menu');
@@ -26,7 +20,7 @@ export class AuthComponent implements OnInit, AfterViewInit {
     const menu = document.querySelector('.menu');
     menu?.classList.toggle('d-none');
     sessionStorage.removeItem('token');
+    sessionStorage.removeItem('username');
     this.router.navigate(['/']);
   }
-
 }

@@ -14,7 +14,6 @@ export class AllMessagesComponent implements OnInit {
 
   ngOnInit(): void {
     this.messageService.getMessages().subscribe((res) => {
-      console.log(res);
       this.messages = res;
     });
   }

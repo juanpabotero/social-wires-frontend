@@ -31,16 +31,13 @@ export class RegisterComponent implements OnInit, AfterViewInit {
   }
 
   SubmitForm() {
-    console.log(this.registerForm.value);
     this.authService.registerUser(this.registerForm.value).subscribe(
       (res) => {
-        console.log(res);
         this.registerForm.reset();
         this.router.navigate(['/login']);
       },
       (err) => {
         this.errors = err.error.message;
-        console.log(this.errors);
         this.modal.classList.toggle('d-none');
       }
     );

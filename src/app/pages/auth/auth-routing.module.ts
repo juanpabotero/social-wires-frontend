@@ -12,26 +12,26 @@ const routes: Routes = [
     children: [
       {
         path: 'create-message',
-        component: CreateMessageComponent
+        component: CreateMessageComponent,
       },
       {
         path: 'my-messages',
-        component: MyMessagesComponent
+        component: MyMessagesComponent,
       },
       {
         path: 'all-messages',
-        component: AllMessagesComponent
+        component: AllMessagesComponent,
       },
-    ]
+    ],
   },
   {
     path: '**',
-    redirectTo: 'create-message'
-  }
+    redirectTo: 'create-message',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AuthRoutingModule { }
+export class AuthRoutingModule {}

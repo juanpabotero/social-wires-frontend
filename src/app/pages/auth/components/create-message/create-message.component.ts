@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MessageService } from 'src/app/services/message.service';
 
@@ -7,27 +7,32 @@ import { MessageService } from 'src/app/services/message.service';
   templateUrl: './create-message.component.html',
   styleUrls: ['./create-message.component.css'],
 })
-export class CreateMessageComponent implements OnInit {
+export class CreateMessageComponent implements AfterViewInit {
   formMessages: FormGroup = this.fb.group({
     title: ['', [Validators.required]],
-    text: ['', [Validators.required]],
+    text: [
+      '',
+      [Validators.required, Validators.pattern('[a-zA-Z0-9 ]{1,700}')],
+    ],
   });
   title: string = 'Title';
   message: string = 'Message...';
+  username: string = sessionStorage.getItem('username') || 'Username';
+  errorSpan: any;
 
   constructor(
     private fb: FormBuilder,
     private messageService: MessageService
   ) {}
 
-  ngOnInit(): void {}
+  ngAfterViewInit(): void {
+    this.errorSpan = document.querySelector('.error');
+  }
 
   onSubmit() {
-    console.log(this.formMessages.value);
     this.messageService
       .createMessage(this.formMessages.value)
       .subscribe((res) => {
-        console.log(res);
         this.formMessages.reset();
       });
   }
@@ -38,5 +43,10 @@ export class CreateMessageComponent implements OnInit {
 
   onKeyUpmessage(event: any) {
     this.message = event.target.value;
+    if (this.formMessages.get('text')?.errors?.['pattern']) {
+      this.errorSpan.classList.remove('d-none');
+      return;
+    }
+    this.errorSpan.classList.add('d-none');
   }
 }

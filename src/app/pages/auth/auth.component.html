@@ -1,26 +1,32 @@
 <div class="container">
   <div class="menu d-none">
-    <h2>Daniel Amadeus</h2>
-    <ul>
-      <li (click)="displayMenu()">
-        <a routerLink="/auth/create-message">Create Message</a>
-      </li>
-      <li (click)="displayMenu()">
-        <a routerLink="/auth/my-messages">My Messages</a>
-      </li>
-      <li (click)="displayMenu()">
-        <a routerLink="/auth/all-messages">See All Messages</a>
-      </li>
-      <li (click)="logout()">
-        <a>Logout</a>
-      </li>
-    </ul>
+    <h2>{{ username }}</h2>
+    <a (click)="displayMenu()" routerLink="/auth/create-message">
+      <img src="../../../assets/icon/create.png" />
+      <span>Create Message</span>
+    </a>
+    <a (click)="displayMenu()" routerLink="/auth/my-messages">
+      <img src="../../../assets/icon/send.png" />
+      <span>My Messages</span>
+    </a>
+    <a (click)="displayMenu()" routerLink="/auth/all-messages">
+      <img src="../../../assets/icon/chatbubbles-sharp.png" />
+      <span>See All Messages</span>
+    </a>
+    <a (click)="logout()">
+      <img src="../../../assets/icon/log-in-sharp.png" />
+      <span>Logout</span>
+    </a>
   </div>
   <header>
     <img src="../../../assets/img/Group 2.png" alt="logo" />
     <nav>
       <img src="../../../assets/icon/chatbox-ellipses-1.png" alt="icon" />
-      <img (click)="displayMenu()" src="../../../assets/icon/menu.png" alt="icon" />
+      <img
+        (click)="displayMenu()"
+        src="../../../assets/icon/menu.png"
+        alt="icon"
+      />
     </nav>
   </header>
   <router-outlet></router-outlet>

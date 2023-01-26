@@ -1,5 +1,6 @@
 h4 {
   margin: 0;
+  font-size: 18px;
 }
 .message {
   background-color: #ccc;
@@ -15,7 +16,15 @@ h4 {
 
 .message span:nth-child(1) {
   font-size: 12px;
+  color: #747474;
 }
 .message span:nth-child(2) {
   font-weight: bold;
+  font-size: 18px;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  font-size: 16px;
 }

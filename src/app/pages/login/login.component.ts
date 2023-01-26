@@ -29,12 +29,11 @@ export class LoginComponent implements OnInit, AfterViewInit {
   }
 
   SubmitForm() {
-    console.log(this.loginForm.value);
     this.authService.loginUser(this.loginForm.value).subscribe(
       (res) => {
-        console.log(res);
-        this.loginForm.reset();
         sessionStorage.setItem('token', res.access_token);
+        sessionStorage.setItem('username', this.loginForm.value.username);
+        this.loginForm.reset();
         this.router.navigate(['/auth/create-message']);
       },
       (err) => {
