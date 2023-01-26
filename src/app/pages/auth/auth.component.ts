@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
@@ -7,7 +8,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 })
 export class AuthComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +20,13 @@ export class AuthComponent implements OnInit, AfterViewInit {
   displayMenu() {
     const menu = document.querySelector('.menu');
     menu?.classList.toggle('d-none');
+  }
+
+  logout() {
+    const menu = document.querySelector('.menu');
+    menu?.classList.toggle('d-none');
+    sessionStorage.removeItem('token');
+    this.router.navigate(['/']);
   }
 
 }

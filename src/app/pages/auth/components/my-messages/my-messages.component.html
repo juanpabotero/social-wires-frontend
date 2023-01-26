@@ -2,12 +2,14 @@
   <h2>My messages</h2>
   <div class="form-group">
     <label for="date">Date select</label>
-    <input
-      type="date"
-      id="date"
-      class="form-control"
-    />
+    <input type="date" id="date" class="form-control" />
   </div>
 
-  <app-message-card></app-message-card>
+  <div *ngFor="let message of messages" class="mb-20">
+    <app-message-card
+      [message]="message.text"
+      [title]="message.title"
+      [date]="message.updatedAt"
+    ></app-message-card>
+  </div>
 </div>

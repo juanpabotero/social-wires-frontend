@@ -34,10 +34,13 @@ export class LoginComponent implements OnInit, AfterViewInit {
       (res) => {
         console.log(res);
         this.loginForm.reset();
+        sessionStorage.setItem('token', res.access_token);
+        this.router.navigate(['/auth/create-message']);
       },
       (err) => {
         this.error = err.error.message;
         console.warn(err);
+        this.loginForm.reset();
         this.modal.classList.toggle('d-none');
       }
     );

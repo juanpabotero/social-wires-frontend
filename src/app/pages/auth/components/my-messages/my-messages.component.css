@@ -39,6 +39,10 @@ label {
   font-size: 14px;
 }
 
+.mb-20 {
+  margin-bottom: 20px;
+}
+
 textarea:invalid {
   border: 1px solid red;
 }
