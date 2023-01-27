@@ -12,5 +12,14 @@
       [date]="message.updatedAt"
       [username]="username"
     ></app-message-card>
+    <div *ngIf="message.comments" class="mt-10">
+      <div *ngFor="let comment of message.comments" class="mt-10">
+        <app-comments
+          [disabled]="true"
+          [messageId]="message.id"
+          [comment]="comment"
+        ></app-comments>
+      </div>
+    </div>
   </div>
 </div>

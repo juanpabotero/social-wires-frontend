@@ -1,0 +1,16 @@
+<section>
+  <div class="border-helper"></div>
+  <form #commentsForm="ngForm" (ngSubmit)="submitForm()">
+    <input
+      [(ngModel)]="comment"
+      [disabled]="disabled"
+      type="text"
+      name="comment"
+      placeholder="Comment on the publication"
+    />
+    <footer>
+      <img src="../../../../../assets/icon/Frame 1.png" alt="emojis" />
+      <button [disabled]="disabled" type="submit">Send</button>
+    </footer>
+  </form>
+</section>

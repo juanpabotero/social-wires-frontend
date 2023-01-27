@@ -3,8 +3,10 @@
   <div class="form-group">
     <label for="search">What search?</label>
     <input
+      (keyup)="search($event)"
       type="search"
       id="search"
+      name="search"
       class="form-control"
       placeholder="I like sports"
     />
@@ -21,5 +23,8 @@
       [date]="message.updatedAt"
       [username]="message.user.username"
     ></app-message-card>
+    <div *ngIf="canComment(message.user.username)" class="mt-10">
+      <app-comments [disabled]="false" [messageId]="message.id"></app-comments>
+    </div>
   </div>
 </div>

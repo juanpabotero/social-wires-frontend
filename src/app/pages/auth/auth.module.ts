@@ -8,6 +8,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MyMessagesComponent } from './components/my-messages/my-messages.component';
 import { MessageCardComponent } from './components/message-card/message-card.component';
 import { AllMessagesComponent } from './components/all-messages/all-messages.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AllMessagesComponent } from './components/all-messages/all-messages.com
     MyMessagesComponent,
     MessageCardComponent,
     AllMessagesComponent,
+    CommentsComponent,
   ],
   imports: [CommonModule, AuthRoutingModule, ReactiveFormsModule, FormsModule],
 })

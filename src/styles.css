@@ -24,5 +24,6 @@ a {
   display: flex;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mt-10 {
+  margin-top: 10px;
+}

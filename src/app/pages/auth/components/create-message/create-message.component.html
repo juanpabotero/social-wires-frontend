@@ -28,7 +28,7 @@
         Avoid writing with signs such as /-+*!@#$%&*()_"
       </span>
     </div>
-    <button type="submit" class="btn btn-primary">Share</button>
+    <button type="submit" class="comments">Share</button>
   </form>
 
   <app-message-card
@@ -36,4 +36,7 @@
     [message]="message"
     [username]="username"
   ></app-message-card>
+  <div class="mt-10">
+    <app-comments></app-comments>
+  </div>
 </div>

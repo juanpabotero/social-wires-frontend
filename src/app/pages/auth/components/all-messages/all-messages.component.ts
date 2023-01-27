@@ -9,6 +9,7 @@ import { MessageService } from 'src/app/services/message.service';
 })
 export class AllMessagesComponent implements OnInit {
   messages: AllMessagesResponse[] = [];
+  username = sessionStorage.getItem('username');
 
   constructor(private messageService: MessageService) {}
 
@@ -16,5 +17,19 @@ export class AllMessagesComponent implements OnInit {
     this.messageService.getMessages().subscribe((res) => {
       this.messages = res;
     });
+  }
+
+  canComment(username: string): boolean {
+    return username !== this.username;
+  }
+
+  search(event: any) {
+    if (event.keyCode === 13) {
+      const searchTerm = (document.querySelector('#search') as HTMLInputElement)
+        .value;
+      this.messageService.getFilterMessage(searchTerm).subscribe((res) => {
+        console.log(res);
+      });
+    }
   }
 }
